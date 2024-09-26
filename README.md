@@ -45,6 +45,19 @@ Una vez caracterizadas las partes componentes principales del proyecto, se esque
 
 <img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/IMG_8395.JPG" alt="Diagrama de flujo" width="750px">
 
+En el diagrama anterior se encuentran esquematizados todos los componentes del proyecto, y es a partir de él que se procede a desarrollar la lógica detrás del funcionamiento del mismo y la implementación a nivel de código. 
+
+En primer lugar y antes de seguir con la explicación detallada de los archivos y los códigos, hay que comprender la lógica bajo la cual se sustenta el proyecto, la cual consta de los siguientes pasos:
+
+1. Espera: El usuario debe presionar el botón de inicio para que el dispositivo lea y reproduzca la secuencia guardada.
+
+2. Inicio del ciclo: El dispositivo recibe la orden y comienza el ciclo de reproducción.
+
+3. Reproducción: Una vez inicia la lectura de la secuencia, se reproducen los sonidos, mientras los leds son encendidos acorde a la nota que se reproduce al instante, mostrando el patrón de la secuencia.
+
+4. 
+
+5. 
 
 ##Implementación
 
@@ -56,3 +69,4 @@ Una vez caracterizadas las partes componentes principales del proyecto, se esque
 
 
 ##Referencias
+
