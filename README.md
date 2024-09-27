@@ -1,16 +1,16 @@
-#Piano con leds y memoria de secuencias
+# Piano con leds y memoria de secuencias
 
-##Introducción
+## Introducción
 
 En este proyecto se realizó el diseño y la implementación del prototipo de un piano de una octava con las siete notas de la escala natural, el cual cuenta tmbién con siete leds, estando cada uno asociado a una nota. Para la implementación del prototipo se usó una FPGA BlackIce 40hx4 programada con verilog. Adicionalmente, el prototipo cuenta con la posibilidad de reproducir una secuencia de notas almacenada en un archivo que se puede modificar libremente. El propósito del dispositivo consiste en reproducir la secuencia para que posteriormente el usuario intente replicarla tocando él mismo las teclas del prototipo.
 
-##Objetivos
+## Objetivos
 
-###Objetivo general
+### Objetivo general
 
 Implementar un prototipo de un piano que facilite el aprendizaje y entendimiento musical básico del usuario, superando los retos de diseño e implementacipon que supone llevar a cabo dicha tarea.
 
-###Objetivos específicos
+### Objetivos específicos
 
 - Desarrollar los archivos necesarios para obtener un prototipo fucional
 
@@ -21,13 +21,13 @@ Implementar un prototipo de un piano que facilite el aprendizaje y entendimiento
 - Fusionar la música y la electrónica en un dispositivo funcional
 
 
-##Ideación
+## Ideación
 
 La idea surgió a partir de querer implementar un dispositivo capaz de reproducir canciones o secuencias musicales, de modo que se activaran unas luces de forma sincronizada con el ritmo y la melodía de la secuencia o canción reproducida. La idea fue descartada por sus limitaciones a nivel práctico, por lo que se optó por implementar un prototipo de piano que, como se mencionó anteriormente, sea capaz de facilitar el entendimiento musical básica del usuario, usando los mismos conceptos de la idea original pero esta vez con un concepto diferente.
 
 El prototipo opera de manera que cada nota está asociada a un led y a su vez, cada nota es activada por uno de los siete distintos pulsadores.
 
-##Diseño
+## Diseño
 
 Para el diseño del dispositivo, se requirió en primer lugar, dividirlo en varias partes:
 
@@ -61,7 +61,7 @@ En primer lugar y antes de seguir con la explicación detallada de los archivos 
 
    Dado que los leds y la bocina no suponen una gran demanda de corriente, todo el circuito se puede alimentar a través de la tarjeta FPGA.
 
-##Implementación
+## Implementación
 
 Para la implementación del prototipo, en primer lugar se realizaron las conexiones correspondientes de la FPGA, la bocina, los leds, los botones y el amplificador. El resultado final de las coexiones se aprecia en la siguiente imagen:
 
@@ -73,11 +73,34 @@ Ya logradas las coexiones y conceptualizada la lógica general del proyecto, se 
 
 <img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/Captura%20de%20pantalla%202024-09-27%20004754.png" width="750px">
 
-##Evidencias
+A continuación se explicará a detalle la función de cada uno de los archivos y los códigos que componen a cada uno.
+
+### Archivo top.v
+
+Este es el archivo principal, que coordina y conecta los demás archivos. En primer lugar, ntegra los otros tres archivos Verilog para utilizar los módulos definidos en ellos; clk10hz, counter8bits, dual_port_ram y gen_freq.
+
+#### Entradas y salidas
+
+La información fluye a través del top.v, por lo que se requiere que en él se definan las entradas y las salidas. Las principales entradas y salidas del sistema son:
+
+- clk: La señal de reloj principal del sistema.
+
+- btn: Un botón que, cuando es presionado, inicia un ciclo de lectura de la memoria.
+
+- btn_in: Son los siete botones de entrada, asociados cada uno a una de las siete notas de la escala natural.
+
+- sounds: Las salidas de audio que llegan al amplificador para posteriormente ser enviadas a la bocina.
+
+  #### Generación de reloj lento:
+  Utiliza el módulo clk10hz para generar una señal de reloj clk2 más lenta a partir del reloj principal. Este nuevo reloj se usa para controlar la velocidad de lectura de la memoria y, por lo tanto, el tempo de la secuencia de notas.
+
+  ####
+
+## Evidencias
 
 
-##Conclusiones
+## Conclusiones
 
 
-##Referencias
+## Referencias
 
