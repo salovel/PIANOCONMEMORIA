@@ -1,0 +1,30 @@
+set_io clk 60 # ICE_CLK 25MHz
+
+set_io -pullup yes btn 4 # sw in
+
+set_io leds[0] 28 # LED7 D2
+set_io leds[1] 29 # LED6 D3
+set_io leds[2] 33 # LED5 D4
+set_io leds[3] 34 # LED4 D5
+set_io leds[4] 31 # LED3 D6
+set_io leds[5] 32 # LED2 D7
+set_io leds[6] 37 # LED1 D8
+set_io leds[7] 38 # LED0 D9
+
+set_io sounds[0] 139 # LED7 D2
+set_io sounds[1] 138 # LED6 D3
+set_io sounds[2] 142 # LED5 D4
+set_io sounds[3] 141 # LED4 D5
+set_io sounds[4] 135 # LED3 D6
+set_io sounds[5] 134 # LED2 D7
+set_io sounds[6] 137 # LED1 D8
+set_io sounds[7] 136 # LED0 D9
+
+set_io -pullup yes btn_in[0] 9 # sw in
+set_io -pullup yes btn_in[1] 10 # sw in
+set_io -pullup yes btn_in[2] 15 # sw in
+set_io -pullup yes btn_in[3] 16 # sw in
+set_io -pullup yes btn_in[4] 11 # sw in
+set_io -pullup yes btn_in[5] 12 # sw in
+set_io -pullup yes btn_in[6] 17 # sw in
+set_io -pullup yes btn_in[7] 18 # sw in
