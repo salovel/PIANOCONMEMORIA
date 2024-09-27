@@ -75,7 +75,7 @@ Ya logradas las coexiones y conceptualizada la lógica general del proyecto, se 
 
 A continuación se explicará a detalle la función de cada uno de los archivos y los códigos que componen a cada uno.
 
-### (Archivo top.v)(https://github.com/salovel/PIANOCONMEMORIA/blob/main/top.v)
+### (Archivo top.v)(https://github.com/salovel/PIANOCONMEMORIA/blob/main/top.v"Archivo top.v")
 
 Este es el archivo principal, que coordina y conecta los demás archivos. En primer lugar, ntegra los otros tres archivos Verilog para utilizar los módulos definidos en ellos; clk10hz, counter8bits, dual_port_ram y gen_freq. A continuación se describe su funcionalidad principal.
 
