@@ -75,7 +75,7 @@ Ya logradas las coexiones y conceptualizada la lógica general del proyecto, se 
 
 A continuación se explicará a detalle la función de cada uno de los archivos y los códigos que componen a cada uno.
 
-### [top.v](https://github.com/salovel/PIANOCONMEMORIA/blob/main/top.v "top.v")
+### [Archivo top.v](https://github.com/salovel/PIANOCONMEMORIA/blob/main/top.v "Archivo top.v")
 
 Este es el archivo principal, que coordina y conecta los demás archivos. En primer lugar, ntegra los otros tres archivos Verilog para utilizar los módulos definidos en ellos; [clk10hz](https://github.com/salovel/PIANOCONMEMORIA/blob/main/clk10hz.v "clk10hz"), [counter8bits](https://github.com/salovel/PIANOCONMEMORIA/blob/main/counter8bits.v "counter8bits"), [dual_port_ram](https://github.com/salovel/PIANOCONMEMORIA/blob/main/dual_port_ram.v "dual_port_ram") y [gen_freq](https://github.com/salovel/PIANOCONMEMORIA/blob/main/gen_freq.v "gen_freq"). A continuación se describe su funcionalidad principal.
 
@@ -106,7 +106,7 @@ Combina los datos leídos de la memoria con el estado de los botones de entrada 
   #### Control del ciclo
   Implementa la lógica para iniciar el ciclo de lectura de la memoria en respuesta de si está pulsado el botón btn.
 
-### Archivo [clk10hz.v](https://github.com/salovel/PIANOCONMEMORIA/blob/main/clk10hz.v "clk10hz.v")
+### [Archivo clk10hz.v](https://github.com/salovel/PIANOCONMEMORIA/blob/main/clk10hz.v "Archivo clk10hz.v")
 
 Este archivo se encarga de la tarea de generar una señal de reloj lenta a partir del reloj principal de la FPGA, el cual es de 25 MHz. Esta señal entra al módulo top.v
 
