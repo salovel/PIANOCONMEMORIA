@@ -67,6 +67,9 @@ Para la implementación del prototipo, en primer lugar se realizaron las conexio
 
 <img src="https://raw.githubusercontent.com/salovel/PIANOCONMEMORIA/refs/heads/main/IMG_8394.JPEG" alt="Diagrama de flujo" width="750px">
 
+En la imagen se pueden observar todos los componentes del dispositivo y sus respectivas conexiones en las protoboards, siendo en una de estas donde se encuentran ubicados los botoes y los leds, y en otra, el amplificador y la bocina.
+
+Ya logradas las coexiones y conceptualizada la lógica general del proyecto, se establece de forma jerárquica qué archivos se van a requerir para la implementación del proyecto. La jerarquía de los archivos se aprecia gráficamente en la siguiente figura:
 
 ##Evidencias
 
