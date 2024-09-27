@@ -41,6 +41,8 @@ Para el diseño del dispositivo, se requirió en primer lugar, dividirlo en vari
 
 - Bocina: La bocina se encarga de reproducir las notas a través de ondas mecánicas.
 
+- Amplificador: El amplificador se encarga de enviar una señal lo suficientemente fuerte a la bocina para que esta pueda reproducir los sonidos.
+
 Una vez caracterizadas las partes componentes principales del proyecto, se esquematiza la conexión entre ellas:
 
 <img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/IMG_8395.JPG" alt="Diagrama de flujo" width="750px">
@@ -53,13 +55,17 @@ En primer lugar y antes de seguir con la explicación detallada de los archivos 
 
 2. Inicio del ciclo: El dispositivo recibe la orden y comienza el ciclo de reproducción.
 
-3. Reproducción: Una vez inicia la lectura de la secuencia, se reproducen los sonidos, mientras los leds son encendidos acorde a la nota que se reproduce al instante, mostrando el patrón de la secuencia.
+3. Reproducción: Una vez inicia la lectura de la secuencia, se reproducen los sonidos, mientras los leds son encendidos de acuerdo a la nota que se reproduce al instante, mostrando el patrón de la secuencia.
 
-4. 
+4. Finalización: Una vez el dispositivo ha leído los datos de la secuencia, queda en espera para nuevamente ser accionado y reproducir la secuencia.
 
-5. 
+   Dado que los leds y la bocina no suponen una gran demanda de corriente, todo el circuito se puede alimentar a través de la tarjeta FPGA.
 
 ##Implementación
+
+Para la implementación del prototipo, en primer lugar se realizaron las conexiones correspondientes de la FPGA, la bocina, los leds, los botones y el amplificador. El resultado final de las coexiones se aprecia en la siguiente imagen:
+
+
 
 
 ##Evidencias
