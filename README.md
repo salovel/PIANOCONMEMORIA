@@ -151,7 +151,7 @@ En este archivo se guarda la información que setea los pines de la tarjeta FPGA
 En este archivo se almacena la secuencia que será leída por el dispositivo para su posterior reproducción.
 
 
-## Evidencias
+<## Evidencias>
 
 
 
@@ -165,5 +165,5 @@ En este archivo se almacena la secuencia que será leída por el dispositivo par
 
 - Tener los conceptos claros suele ser en muchos casos el único paso necesario para resolver un problema pequeño pero importante, cuya resolución permite avanzar en el desarrollo del proyecto.
 
-## Referencias
+
 
