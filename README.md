@@ -65,7 +65,7 @@ En primer lugar y antes de seguir con la explicación detallada de los archivos 
 
 Para la implementación del prototipo, en primer lugar se realizaron las conexiones correspondientes de la FPGA, la bocina, los leds, los botones y el amplificador. El resultado final de las coexiones se aprecia en la siguiente imagen:
 
-<img src="[(https://raw.githubusercontent.com/salovel/PIANOCONMEMORIA/refs/heads/main/IMG_8394.JPEG)" alt="Diagrama de flujo" width="750px">
+<img src="https://raw.githubusercontent.com/salovel/PIANOCONMEMORIA/refs/heads/main/IMG_8394.JPEG" alt="Diagrama de flujo" width="750px">
 
 
 ##Evidencias
