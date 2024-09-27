@@ -146,7 +146,7 @@ Haciendo uso de la implementación de un archivo testbench, se comprueba el func
 
 Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mientras el usuario pulsa los botones pueden presentarse de forma paralela, resulta útil graficar el funcionamiento lógico de todo el dispositivo:
 
-<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="900px">
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="1000px">
 
 En este diagrama de flujo se condensa el proceso y funcionamiento general del dispositivo.
 
