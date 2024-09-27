@@ -154,7 +154,7 @@ El RTL del archivo top.v se encuentra a continuación:
 
 <img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="750px">
 
-
+Finalmente, el dispositivo se puede ver en funcionamiento en el siguiente video: https://youtu.be/Tw-GfQIO8_8. En este video se aprecia cómo reproduce la secuencia una vez es presionado el botón de inicio para, una vez terminado el ciclo de lectura, permitir al usuario presionar los botones para que intente replicar la secuencia reproducida. Nótese que en esta prueba, los leds mantienen encendidos y son apagados cuando se accionan.
 
 
 ## Conclusiones
@@ -166,6 +166,8 @@ El RTL del archivo top.v se encuentra a continuación:
 - Las mejoras a un proyecto de estas características se deben hacer gradualmente, yendo de lo general a lo específico. Así se obtiene en primer lugar un dispositivo funcional sin errores necesariamente pero imperfecto, y a través de la prueba y error, las ideas de mejora que van surgiendo pueden intentar ser implementadas poco a poco.
 
 - Tener los conceptos claros suele ser en muchos casos el único paso necesario para resolver un problema pequeño pero importante, cuya resolución permite avanzar en el desarrollo del proyecto.
+
+
 
 
 
