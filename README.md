@@ -75,9 +75,9 @@ Ya logradas las coexiones y conceptualizada la lógica general del proyecto, se 
 
 A continuación se explicará a detalle la función de cada uno de los archivos y los códigos que componen a cada uno.
 
-### Archivo top.v
+### (Archivo top.v)(https://github.com/salovel/PIANOCONMEMORIA/blob/main/top.v)
 
-Este es el archivo principal, que coordina y conecta los demás archivos. En primer lugar, ntegra los otros tres archivos Verilog para utilizar los módulos definidos en ellos; clk10hz, counter8bits, dual_port_ram y gen_freq.
+Este es el archivo principal, que coordina y conecta los demás archivos. En primer lugar, ntegra los otros tres archivos Verilog para utilizar los módulos definidos en ellos; clk10hz, counter8bits, dual_port_ram y gen_freq. A continuación se describe su funcionalidad principal.
 
 #### Entradas y salidas
 
@@ -91,10 +91,27 @@ La información fluye a través del top.v, por lo que se requiere que en él se 
 
 - sounds: Las salidas de audio que llegan al amplificador para posteriormente ser enviadas a la bocina.
 
-  #### Generación de reloj lento:
+  #### Generación de reloj lento
   Utiliza el módulo clk10hz para generar una señal de reloj clk2 más lenta a partir del reloj principal. Este nuevo reloj se usa para controlar la velocidad de lectura de la memoria y, por lo tanto, el tempo de la secuencia de notas.
 
-  ####
+  #### Lectura de memoria
+  Lee datos secuencialmente desde la memoria RAM dual_port_ram utilizando un contador runner como dirección. El contador se incrementa en cada ciclo del reloj lento clk2.
+
+  #### Procesamiento y generación de sonido
+Combina los datos leídos de la memoria con el estado de los botones de entrada btn_in para generar señales de control gen_in. Estas señales se envían al módulo gen_freq para generar las salidas de audio sounds correspondientes.
+
+#### Visualización de leds
+  Al mismo tiempo que se ejecuta la generación de sonido,  el valor de las señales de control gen_in van las salidas de los LEDs leds, proporcionando una representación visual de la secuencia de notas o del estado del sistema.
+
+  #### Control del ciclo
+  Implementa la lógica para iniciar el ciclo de lectura de la memoria en respuesta de si está pulsado el botón btn.
+
+### Archivo clk10hz.v
+
+Este archivo se encarga de la tarea de generar una señal de reloj lenta a partir del reloj principal de la FPGA, el cual es de 25 MHz. Esta señal entra al módulo top.v
+
+
+  
 
 ## Evidencias
 
