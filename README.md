@@ -61,6 +61,7 @@ En primer lugar y antes de seguir con la explicación detallada de los archivos 
 
    Dado que los leds y la bocina no suponen una gran demanda de corriente, todo el circuito se puede alimentar a través de la tarjeta FPGA.
 
+
 ## Implementación
 
 Para la implementación del prototipo, en primer lugar se realizaron las conexiones correspondientes de la FPGA, la bocina, los leds, los botones y el amplificador. El resultado final de las coexiones se aprecia en la siguiente imagen:
@@ -134,6 +135,13 @@ Para cada uno de los botones btn0 a btn6, se aplica la siguiente lógica: con if
 #### Asignación de salidas
 la línea salida_C = estado_salida_C; ... salida_B = estado_salida_B logra que las salidas de audio se asignen directamente a los valores almacenados en los registros de estado correspondientes.
 
+
+### Simulación de memoria
+
+Haciendo uso de la implementación de un archivo testbench, se comprueba el funcionamiento de la memoria, lo cual genera un GTKwave en donde se ve cómo cambian las salidas según las variaciones del clock utilizado en el diseño.
+
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/tbproyecto.png" width="750px">
+
 ### Diagrama de flujo
 
 Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mientras el usuario pulsa los botones pueden presentarse de forma paralela, resulta útil graficar el funcionamiento lógico de todo el dispositivo:
@@ -155,6 +163,8 @@ El RTL del archivo top.v se encuentra a continuación:
 <img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="750px">
 
 Finalmente, el dispositivo se puede ver en funcionamiento en el siguiente video: https://youtu.be/Tw-GfQIO8_8. En este video se aprecia cómo reproduce la secuencia una vez es presionado el botón de inicio para, una vez terminado el ciclo de lectura, permitir al usuario presionar los botones para que intente replicar la secuencia reproducida. Nótese que en esta prueba, los leds mantienen encendidos y son apagados cuando se accionan.
+
+
 
 
 ## Conclusiones
