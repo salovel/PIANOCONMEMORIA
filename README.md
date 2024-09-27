@@ -140,7 +140,7 @@ la línea salida_C = estado_salida_C; ... salida_B = estado_salida_B logra que l
 
 Haciendo uso de la implementación de un archivo testbench, se comprueba el funcionamiento de la memoria, lo cual genera un GTKwave en donde se ve cómo cambian las salidas según las variaciones del clock utilizado en el diseño.
 
-<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/tbproyecto.png" width="750px">
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/tbproyecto.png" width="900px">
 
 ### Diagrama de flujo
 
