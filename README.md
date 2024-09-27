@@ -136,8 +136,9 @@ la línea salida_C = estado_salida_C; ... salida_B = estado_salida_B logra que l
 
 ### Diagrama de flujo
 
-Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mientras el usuario pulsa los botones pueden presentarse de forma paralela, resulta mejor graficar el funcionamiento lógico de todo el dispositivo:
+Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mientras el usuario pulsa los botones pueden presentarse de forma paralela, resulta útil graficar el funcionamiento lógico de todo el dispositivo:
 
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="750px">
 
 
 
