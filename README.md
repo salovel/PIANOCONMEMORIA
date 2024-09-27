@@ -110,8 +110,36 @@ Combina los datos leídos de la memoria con el estado de los botones de entrada 
 
 Este archivo se encarga de la tarea de generar una señal de reloj lenta a partir del reloj principal de la FPGA, el cual es de 25 MHz. Esta señal entra al módulo top.v
 
+#### [Archivo dual_port_ram.v](https://github.com/salovel/PIANOCONMEMORIA/blob/main/dual_port_ram.v "Archivo dual_port_ram.v")
 
-  
+  Este módulo implementa una memoria RAM de doble puerto, lo que significa que permite acceder a dos direcciones de memoria diferentes de forma simultánea, una para lectura y otra para escritura. A pesar de que en el proyecto no se requiere hacer uso de todas las funciones que ofrece la memoria de doble puerto como la función de escritura, sí se usa su función básica de memoria de acceso rápido.
+
+
+### [Archivo gen_freq.v](https://github.com/salovel/PIANOCONMEMORIA/blob/main/gen_freq.v "Archivo gen_freq.v")
+
+En este archivo se dan las órdenes para generar las frecuencias de cada una de las notas. Se producen las notas musicales según la lectura de la memoria y según los botones que sean pulsados, que va de btn0 a btn6.
+
+#### Entradas
+- input wire clk: Esta es laseñal de reloj de la FPGA, la cual opera a 25 MHz, a partir de esta señal se controla la generación de las señales de audio.
+
+- input wire btn0, btn1, ... btn6: Son las entradas de los botones, que indican qué nota musical se debe generar. Cada botó está asociado a una nota distinta: btn0=C, btn1=D, btn2=E, btn3=F, btn4=G, btn5=A, btn6=B.
+
+#### Salidas
+reg [15:0] contador_C, contador_D, ... contador_B: Se declaran contadores de 16 bits para cada nota musical. Estos contadores se utilizarán para dividir la frecuencia del reloj y generar las señales de audio.
+reg estado_salida_C, estado_salida_D, ... estado_salida_B: Se declaran registros para almacenar el estado de cada salida de audio (0 o 1), que determinará si la nota correspondiente está sonando o no.
+
+#### Generación de las señales de audio
+Para cada uno de los botones btn0 a btn6, se aplica la siguiente lógica: con if(~btnX) se ejecuta la siguiente línea de código si el botón correspondiente está presionado. Dado que los botones están trabajando con lógica negativa, el botón presionado significa que está a nivel bajo. Con if (contador_X >= DIV_X) se ordena que si el contador asociado a la nota ha alcanzado el valor del divisor correspondiente, se reinicie el contador y se invierta el estado de la salida de audio (estado_salida_X). Con else contador_X <= contador_X + 1 se logra que si el contador no ha alcanzado el divisor, se incremente en 1. Finalmente se tiene que else contador_X <= 0 hace que si el botón no está presionado, se reinicie el contador asociado a esa nota.
+
+#### Asignación de salidas
+la línea salida_C = estado_salida_C; ... salida_B = estado_salida_B logra que las salidas de audio se asignen directamente a los valores almacenados en los registros de estado correspondientes.
+
+### Diagrama de flujo
+
+Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mientras el usuario pulsa los botones pueden presentarse de forma paralela, resulta mejor graficar el funcionamiento lógico de todo el dispositivo:
+
+
+
 
 ## Evidencias
 
