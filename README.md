@@ -140,13 +140,30 @@ Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mi
 
 <img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="750px">
 
+En este diagrama de flujo se condensa el proceso y funcionamiento general del dispositivo.
+
+### Archivos adicionales necesarios
+
+#### [Archivo top.pcf](https://github.com/salovel/PIANOCONMEMORIA/blob/main/top.pcf) "Archivo Archivo top.pcf")
+En este archivo se guarda la información que setea los pines de la tarjeta FPGA y les asigna una salida o entrada.
+
+#### [Archivo file.mem](https://github.com/salovel/PIANOCONMEMORIA/blob/main/file.mem "Archivo file.mem")
+En este archivo se almacena la secuencia que será leída por el dispositivo para su posterior reproducción.
 
 
 ## Evidencias
 
+
+
 ## Conclusiones
 
-- 
+- A lo largo del desarrollo del proyecto, se hizo evidente que el mismo funcionaría más eficientemente al establecer una jerarquía entre los módulos, teniendo un módulo superior a los demás. Esto facilita el procesamiento de entradas y salidas para el desarrollador.
+
+- El principal reto a la hora de implementar un dispositivo que materializa una idea es poder relacionar todos los archivos y que su base sea la lógica inicial del proyecto, ya que un solo concepto o proceso puede suponer varias líneas de código para el tratamiento de entradas y salidas que conectan varios módulos del proyecto.
+
+- Las mejoras a un proyecto de estas características se deben hacer gradualmente, yendo de lo general a lo específico. Así se obtiene en primer lugar un dispositivo funcional sin errores necesariamente pero imperfecto, y a través de la prueba y error, las ideas de mejora que van surgiendo pueden intentar ser implementadas poco a poco.
+
+- Tener los conceptos claros suele ser en muchos casos el único paso necesario para resolver un problema pequeño pero importante, cuya resolución permite avanzar en el desarrollo del proyecto.
 
 ## Referencias
 
