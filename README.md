@@ -150,7 +150,9 @@ En este archivo se guarda la información que setea los pines de la tarjeta FPGA
 #### [Archivo file.mem](https://github.com/salovel/PIANOCONMEMORIA/blob/main/file.mem "Archivo file.mem")
 En este archivo se almacena la secuencia que será leída por el dispositivo para su posterior reproducción.
 
+El RTL del archivo top.v se encuentra a continuación:
 
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="750px">
 
 
 
