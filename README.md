@@ -146,7 +146,7 @@ Haciendo uso de la implementación de un archivo testbench, se comprueba el func
 
 Dado que varios de los procesos ocurridos durante la ejecución en un ciclo o mientras el usuario pulsa los botones pueden presentarse de forma paralela, resulta útil graficar el funcionamiento lógico de todo el dispositivo:
 
-<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="1000px">
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/_Diagrama%20de%20flujo.jpeg" width="750px">
 
 En este diagrama de flujo se condensa el proceso y funcionamiento general del dispositivo.
 
@@ -160,7 +160,7 @@ En este archivo se almacena la secuencia que será leída por el dispositivo par
 
 El RTL del archivo top.v se encuentra a continuación:
 
-<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/topv.png" width="750px">
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/topv.png" width="1000px">
 
 Finalmente, el dispositivo se puede ver en funcionamiento en el siguiente video: https://youtu.be/Tw-GfQIO8_8. En este video se aprecia cómo reproduce la secuencia una vez es presionado el botón de inicio para, una vez terminado el ciclo de lectura, permitir al usuario presionar los botones para que intente replicar la secuencia reproducida. Nótese que en esta prueba, los leds mantienen encendidos y son apagados cuando se accionan.
 
