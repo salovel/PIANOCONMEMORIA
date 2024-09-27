@@ -71,6 +71,8 @@ En la imagen se pueden observar todos los componentes del dispositivo y sus resp
 
 Ya logradas las coexiones y conceptualizada la lógica general del proyecto, se establece de forma jerárquica qué archivos se van a requerir para la implementación del proyecto. La jerarquía de los archivos se aprecia gráficamente en la siguiente figura:
 
+<img src="https://github.com/salovel/PIANOCONMEMORIA/blob/main/Captura%20de%20pantalla%202024-09-27%20004754.png" width="750px">
+
 ##Evidencias
 
 
